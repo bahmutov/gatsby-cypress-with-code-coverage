@@ -1,5 +1,7 @@
 # gatsby-cypress-with-code-coverage
 
+> Gatsby example site with Cypress E2E tests and code coverage
+
 This repository was scaffolded from the official [starter example](https://github.com/gatsbyjs/gatsby-starter-hello-world). Then I have added [babel-plugin-istanbul]() following the [Gatsby Babel documentation](https://github.com/gatsbyjs/gatsby-starter-hello-world)
 
 ```
