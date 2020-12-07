@@ -1,11 +1,18 @@
 {
-  "plugins": [
-    [
-      "babel-plugin-istanbul", {
-        "include": ["src/**/*.js"]
-      }
-    ]
-  ],
+  "env": {
+    "develop": {
+      "plugins": [
+        [
+          "babel-plugin-istanbul",
+          {
+            "include": [
+              "src/**/*.js"
+            ]
+          }
+        ]
+      ]
+    }
+  },
   "presets": [
     [
       "babel-preset-gatsby",

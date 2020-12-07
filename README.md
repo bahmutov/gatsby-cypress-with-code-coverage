@@ -54,3 +54,26 @@ We do not want `.cache` files in the coverage list, we only want our local `src`
 The `window.__coverage__` object now has a single entry.
 
 ![Coverage for src pages only](images/coverage-src.png)
+
+We do not want to instrument the source code in production. Thus let's move the Istanbul plugin into `develop` environment
+
+```json
+{
+  "env": {
+    "develop": {
+      "plugins": [
+        [
+          "babel-plugin-istanbul",
+          {
+            "include": [
+              "src/**/*.js"
+            ]
+          }
+        ]
+      ]
+    }
+  }
+}
+```
+
+If you run `npm run develop`, the `window.__coverage__` object will not be defined. If you execute `NODE_ENV=develop npm run develop` the code will be instrumented.
